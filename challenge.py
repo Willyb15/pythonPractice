@@ -29,10 +29,10 @@ age = 31
 # Call the function.
 # Function = defintion in python.
 
-def sayHello():
-	print 'hello'
+# def sayHello():
+# 	print 'hello'
 
-sayHello()
+# sayHello()
 
 
 # 4) Declare a variable named splitName and set it equal to
@@ -43,9 +43,9 @@ sayHello()
 # HINT: Remember to research the methods and concepts listed 
 # in the instructions PDF.
 
-fullName = "Will Bryant"
-splitName = fullName.split(' ')
-print splitName
+# fullName = "Will Bryant"
+# splitName = fullName.split(' ')
+# print splitName
 
 
 # 5) Write another simple function that takes no parameters called "sayName".
@@ -53,12 +53,76 @@ print splitName
 # equal to the first value in the splitName array from #4.
 # Call the function.  (In our example, "Hello, John!" would be printed to the console.)
 
-def sayName():
-	entry = raw_input('>>>>>')
-	# print 'Hello, ' % splitName[0]
-	print 'Hello, ' + entry
+# def sayName():
+# 	entry = raw_input('>>>>>')
+# 	# print 'Hello, ' % splitName[0]
+# 	print 'Hello, ' + entry
 
-sayName()
+# sayName()
+
+# 6) Write another function named myAge.  This function should take one parameter: the year you 
+# were born, and it should print the implied age to the console.
+# Call the function, passing the year you were born as the argument/parameter.
+
+
+
+import datetime
+now = datetime.datetime.now()
+print now
+currentyear = now.year
+print currentyear
+
+
+def myAge(yearyouwereborn):
+	print currentyear - yearyouwereborn
+
+myAge(1986)
+
+
+# 7) Using the basic function given below, add code so that sum_odd_numbers 
+# will print to the console the sum of all the odd numbers from 1 to 5000.  
+# Don't forget to call the function!
+# HINT: Consider using a 'for loop'.
+
+def sumOdd():
+	sum = 0
+	for i in range (1, 5001):
+		if (i % 2 == 1):
+			sum += i
+	print sum
+
+sumOdd()
+
+
+def sumOdd2():
+	sum = 0
+	# range has a 3rd arg. Step is the thrid, so you can run the 
+	# loop by 2s (instead of 1s)
+	# for i in range(1,5001,2):
+	for i in range(4999,0,-2):
+		sum += i
+	print sum
+
+sumOdd2()
+
+def sumOdd3():
+	i = 1
+	sum = 0
+	while 1:
+		sum += i
+		i += 2
+		if (i >=5000):
+			break
+	print sum
+
+sumOdd3()
+
+
+
+
+
+
+
 
 
 
