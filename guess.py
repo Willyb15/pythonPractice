@@ -20,3 +20,18 @@ while keep_playing == True:
 		if(guess == correct_number):
 			print "You Win"
 			keep_guessing = False
+		elif(total_tries == used_tries):
+			print 'Sorry You are out of guesses. The number was %d' % correct_number
+			keep_guessing = False
+		else:
+			if(guess < correct_number):
+				print "Too Low"
+			else:
+				print "Too High"
+	play_again = raw_input('Would you like to play agian? Enter yes or no\n')
+
+	if(play_again == 'yes'):
+		keep_playing = True
+	else:
+		keep_playing = False
+		print 'thank you for playing'
